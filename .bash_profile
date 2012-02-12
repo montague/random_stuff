@@ -22,6 +22,7 @@ alias cdp="cd ~/work/projects"
 alias cdw="cd ~/work"
 alias cdd="cd ~/Desktop"
 alias cdc="cd ~/code"
+alias cddc="cd ~/Dropbox/code"
 alias cdsmb="cd ~/work/projects/smb_portal"
 alias cdww="cd ~/work/projects/where_web"
 alias cdnb="cd ~/work/projects/nearbuys"
@@ -42,17 +43,9 @@ function rtt(){
 #shows ruby version, current dir, current branch
 export PS1="[\$(~/.rvm/bin/rvm-prompt i v g)]\[\e[1;36m\]\$(parse_git_branch)\[\e[0m\]:\W$ " 
 
-#export PS1="[\$(~/.rvm/bin/rvm-prompt i v g)]\[\e[1;36m\]fuck\[\e[0m\]:\W> " 
-
-#old--doesn't show rvm version
-#export PS1="\h:\W \u\[\e[1;36m\]\$(parse_git_branch)\[\e[0m\]$ " 
-
 parse_git_branch() {
  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-
-#old--no color for branch
-#export PS1='[$(~/.rvm/bin/rvm-prompt i v g)]$(__git_ps1) \W \$ '
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH" # Add MySql config
 export EDITOR="/usr/local/bin/mate"

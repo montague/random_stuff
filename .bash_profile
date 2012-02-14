@@ -41,7 +41,7 @@ function rtt(){
 #command line prompt
 
 #shows ruby version, current dir, current branch
-export PS1="[\$(~/.rvm/bin/rvm-prompt i v g)]\[\e[1;36m\]\$(parse_git_branch)\[\e[0m\]:\W$ " 
+export PS1="\[\e[0m\][\$(~/.rvm/bin/rvm-prompt i v g)]\[\e[1;36m\]\$(parse_git_branch)\[\e[0m\]:\W$ \[\e[0;92m\]" 
 
 parse_git_branch() {
  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'

@@ -1,3 +1,0 @@
---api documentation generator for vanilla restful apis. given a url and
-the assumption that shit is actually restful, it should be obvious
-what sending a particular request to that endpoint does...
